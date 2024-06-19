@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,13 +16,13 @@
                 </h1>
             </div>
             <div class="col-md-4" class="game-title">
-                <h3 id="score">
-                    Score : 0 points
+                <h3>
+                    Score : <span class="counter-display">0<span> points
                 </h3>
             </div>
             <div class="row cookie">
                 <div class="col-md-8">
-                    <input type="image" id="Teemo" src="..\images\pngwing.com.png" />    
+                    <input type="image" class="counter-plus" id="Teemo" src="..\images\pngwing.com.png" />
                 </div>
             <div class="col-md-4">
                 <div class="passif" id="cpm">CPM :</div>
@@ -47,4 +47,5 @@
         </div>
     </div>
 </body>
+<script src="script.js"></script>
 </html>
