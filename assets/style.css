@@ -29,3 +29,7 @@ h3{
 .Abilities-btn{
     margin-bottom: 1%;
 }
+
+input[type="image" i] {
+    cursor:url('../img/cursor.cur'),auto;
+}
