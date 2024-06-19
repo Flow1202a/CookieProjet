@@ -21,9 +21,9 @@
 h3{
     margin-bottom: -3%;
 }
-.auto{
-    margin-top: -25%;
-    margin-left: 292%;
+.auto {
+    position: fixed;
+    margin-left: 35px
 }
 
 .Abilities-btn{
