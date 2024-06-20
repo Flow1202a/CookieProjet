@@ -23,9 +23,10 @@
     margin-top: 3%;
 }
 
-.auto{
-    margin-top: -25%;
-    margin-left: 292%;
+.auto {
+    background:linear-gradient(73deg, #020022, #1f6b69);
+    border: 1px solid rgb(198, 169, 3);
+    color: white;
 }
 
 .shop {
@@ -41,11 +42,11 @@
     border: 1px solid rgb(198, 169, 3);
 }
 
-.Abilities-btn:hover {
+.Abilities-btn:hover, .auto:hover {
     border: 1px solid aquamarine;
 }
 
-.Abilities-btn:active {
+.Abilities-btn:active, .auto:active{
     background:linear-gradient(73deg, #020022, #3dded9);
 }
 
