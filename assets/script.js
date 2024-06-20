@@ -9,6 +9,9 @@ let countCpm = 5//ajouter les multiplicateur ici
 updateCounter();
 updateCounterCpm();
 
+
+
+
 //clicker
 counterPlusElem.addEventListener("click",()=>{
     if(countCpm === 1){
@@ -54,4 +57,8 @@ function updateCounter(){
 function updateCounterCpm(){
     cpm.innerHTML = countCpm;
 }
+
+
+
+
 
