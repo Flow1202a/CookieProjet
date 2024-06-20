@@ -31,5 +31,5 @@ h3{
 }
 
 input[type="image" i] {
-    cursor:url('../img/cursor.cur'),auto;
+    cursor:url('../images/cursor.cur'),auto;
 }

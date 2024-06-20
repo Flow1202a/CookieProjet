@@ -11,24 +11,24 @@
     <div class="container">
         <div class="row head">
             <div class="col-md-8 text-center">
-                <h1 class="game-title" class="game-title">
+                <h1 class="game-title game-title">
                     Teemo Hitter
                 </h1>
             </div>
-            <div class="col-md-4" class="game-title">
+            <div class="col-md-4 game-title">
                 <h3>
-                    Score : <span class="counter-display">0<span> points
+                    Score : <span class="counter-display">0</span> points
                 </h3>
             </div>
             <div class="row cookie">
                 <div class="col-md-8">
-                    <input type="image" class="counter-plus" id="Teemo" src="..\images\pngwing.com.png" />
+                    <img type="image" class="counter-plus" id="Teemo" data-value="5" src="..\images\pngwing.com.png" />
                 </div>
             <div class="col-md-4">
-                <div class="passif" id="cpm">CPM :</div>
+                <div class="passif" >CPM : <span class="cpm" id="cpm"></span></div>
                 <div class="row auto-click position-absolute">
-                    <div class="auto" id="auto">
-                        <button>Auto : OFF</button>
+                    <div class="auto" >
+                        <button id="toggleButton" class="off">AUTO : OFF</button>
                     </div>
                 </div>
                 <div class="row abilities">
