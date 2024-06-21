@@ -82,3 +82,59 @@ span {
 input[type="image" i] {
     cursor:url('../images/cursor.cur'),auto;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.click-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.spike {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom;
+    width: 0;
+    height: 0;
+    background: white;
+    border-radius: 0.3mm;
+    transform: rotate(var(--angle)) translateY(var(--distance));
+}
+.effect .spike {
+    animation: animate 0.75s;
+}
+@keyframes animate {
+    0% {
+        width: 3px;
+        height: 12px;
+        opacity: 0;
+        transform: rotate(var(--angle)) translateY(0);
+    }
+    2% {
+        width: 4px;
+        height: 16px;
+        opacity: 1;
+        transform: rotate(var(--angle)) translateY(0);
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+        transform: rotate(var(--angle)) translateY(var(--distance));
+    }
+}
+
+
+
+
+
