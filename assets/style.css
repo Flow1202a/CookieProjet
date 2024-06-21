@@ -101,12 +101,28 @@ span {
     transform-origin: bottom;
     width: 0;
     height: 0;
-    background: white;
+    background: #0d273c;
     border-radius: 0.3mm;
     transform: rotate(var(--angle)) translateY(var(--distance));
 }
+
+#spikeCount{
+    font-size: large;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom;
+    width: 0;
+    height: 0;
+    color: #0aa27d;
+    transform: rotate(var(--angle)) translateY(var(--distance));
+}
+.remover{
+    display: none;
+}
 .effect .spike {
-    animation: animate 0.75s;
+    animation: animate 0.45s;
 }
 @keyframes animate {
     0% {
@@ -122,10 +138,9 @@ span {
         transform: rotate(var(--angle)) translateY(0);
     }
     100% {
-        width: 0px;
-        height: 0px;
+        width: 0;
+        height: 0;
         opacity: 1;
         transform: rotate(var(--angle)) translateY(var(--distance));
     }
 }
-

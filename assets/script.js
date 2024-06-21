@@ -3,25 +3,23 @@ let counterPlusElem = document.querySelector('.counter-plus');
 let cpm = document.querySelector('.cpm');
 let count = 0;
 let countCpm = 5;
-
-//ajouter les multiplicateur ici
-
-
-//update
-
+let btn = document.querySelector(".counter-plus");
+let animationInProgress = false;
+let animationId;
 let sheenCost = 100;
 let phageCost = 300;
 let trinityCost = 1000;
 let bfswordCost = 10000;
 let pickaxeCost = 50000;
-let infinityedgeCost = 200000;  
+let infinityedgeCost = 200000;
 let igniteCost = 1000000;
 let exhaustCost = 2000000;
 let timer =0;
-
+let counter = document.getElementById("countSpike")
+counter = parseInt(cpm)
+//update
 updateCounter();
 updateCounterCpm();
-
 
 //clicker
 counterPlusElem.addEventListener("click",()=>{
@@ -60,29 +58,32 @@ document.getElementById('toggleButton').addEventListener('click', function() {
     }
 });
 
+
 //impact click
-let btn = document.querySelector(".counter-plus");
-let animationInProgress = false;
-let animationId;
 btn.addEventListener("click", (e) => {
     const clickEffect = document.querySelector(".click-effect");
-
+    let countSpike = document.getElementById("spikeCount")
+    countSpike.innerText = countCpm
     if (animationInProgress) {
         clearTimeout(animationId);
         clickEffect.classList.remove("effect");
+        countSpike.classList.remove("remover");
         void clickEffect.offsetWidth;
     }
-
+    countSpike.classList.remove("remover");
     clickEffect.style.top = e.clientY + window.scrollY + "px";
     clickEffect.style.left = e.clientX + window.scrollX + "px";
+    countSpike.classList.add("effect");
     clickEffect.classList.add("effect");
     animationInProgress = true;
 
     animationId = setTimeout(() => {
         clickEffect.classList.remove("effect");
+        countSpike.classList.add("remover")
         animationInProgress = false;
-    }, 750);
+    }, 500);
 });
+
 
 
 //Fonctions
@@ -189,4 +190,3 @@ document.getElementById('ignite').addEventListener('click',function(){
         }
     }
 });
-
