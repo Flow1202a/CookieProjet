@@ -14,14 +14,13 @@
     width: 63%;
     height: auto;
     margin-left: 20%;
-    cursor:pointer;
+    cursor:url('/images/fightingcursor.cur'), auto;
     user-select: none;
 }
 
 #Teemo:active{
     transform: scale(101%) rotate(2deg);
     transition: ease-in-out;
-
 }
 
 .cookie {
@@ -37,9 +36,10 @@
     color: white;
 }
 
-.shop {
+.shop, .offcanvas-body,.offcanvas-header {
     background: linear-gradient(73deg, #020022, #1f6b69);
     border: 2px solid rgb(198, 169, 3);
+    cursor: url('/images/pointerlol.cur'), auto; 
 }
 
 .Abilities-btn{
@@ -48,15 +48,18 @@
     display: flex;
     justify-content: space-around;
     border: 1px solid rgb(198, 169, 3);
-
 }
 
-.Abilities-btn:hover, .off:hover {
+.Abilities-btn:hover, .dropdown-item:hover {
     border: 1px solid aquamarine;
+    cursor: url('/images/pointerlol.cur'), auto;
 }
 
+.dropdown-item:hover {
+   background:linear-gradient(73deg, #020022, #3dded9);;
+}
 
-.off:active{
+.off:active, .dropdown-menu{
     background:linear-gradient(73deg, #020022, #3dded9);
 }
 
@@ -65,7 +68,6 @@
     transform: scale(101%);
     background: linear-gradient(to right, #020022, #3dded9);
     animation: gradientAnimation 0.1s normal;
-
 }
 @keyframes gradientAnimation {
     0% {
@@ -88,6 +90,3 @@ span {
     font-size: 20px
 }
 
-input[type="image" i] {
-    cursor:url('../images/cursor.cur'),auto;
-}
