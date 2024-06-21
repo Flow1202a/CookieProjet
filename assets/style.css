@@ -14,6 +14,7 @@
     width: 63%;
     height: auto;
     margin-left: 20%;
+    cursor:pointer;
 }
 #Teemo:active{
     transform: scale(101%) rotate(2deg);
@@ -28,7 +29,7 @@
     margin-top: 3%;
 }
 
-.auto {
+.off {
     background:linear-gradient(73deg, #020022, #1f6b69);
     border: 1px solid rgb(198, 169, 3);
     color: white;
@@ -48,21 +49,20 @@
 
 }
 
-.Abilities-btn:hover, .auto:hover {
+.Abilities-btn:hover, .off:hover {
     border: 1px solid aquamarine;
 }
 
-<<<<<<< HEAD
-.Abilities-btn:active, .auto:active{
+
+.off:active{
     background:linear-gradient(73deg, #020022, #3dded9);
 }
-=======
+
 .Abilities-btn:active {
     transition: all ease-in-out 0.05s;
     transform: scale(101%);
     background: linear-gradient(to right, #020022, #3dded9);
     animation: gradientAnimation 0.1s normal;
->>>>>>> flo
 
 }
 @keyframes gradientAnimation {

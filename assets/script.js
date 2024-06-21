@@ -31,6 +31,9 @@ document.getElementById('toggleButton').addEventListener('click', function() {
         button.classList.remove('off');
         button.classList.add('on');
         button.textContent = 'AUTO : ON';
+        button.style.background = 'linear-gradient(73deg, #020022, #1f6b69)';
+        button.style.color = 'white';
+        button.style.border = '1px solid gold'
 
         intervalId = setInterval(function (){
             count += countCpm;
