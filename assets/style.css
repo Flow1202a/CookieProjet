@@ -1,0 +1,84 @@
+
+.gametitle-custom {
+    --bs-navbar-color: red;
+}
+
+.head {
+    padding-top:1%;
+}
+
+#score {
+    padding-top: 2%;
+}
+#Teemo{
+    width: 63%;
+    height: auto;
+    margin-left: 20%;
+}
+#Teemo:active{
+    transform: scale(101%) rotate(2deg);
+    transition: ease-in-out;
+
+}
+
+.cookie {
+    padding-top: 2%;
+}
+.abilities{
+    margin-top: 3%;
+}
+
+.auto{
+    margin-top: -25%;
+    margin-left: 292%;
+}
+
+.shop {
+    background: linear-gradient(73deg, #020022, #1f6b69);
+    border: 2px solid rgb(198, 169, 3);
+}
+
+.Abilities-btn{
+    background:linear-gradient(73deg, #020022, #1f6b69);
+    margin-bottom: 1%;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid rgb(198, 169, 3);
+
+}
+
+.Abilities-btn:hover {
+    border: 1px solid aquamarine;
+}
+
+.Abilities-btn:active {
+    transition: all ease-in-out 0.05s;
+    transform: scale(101%);
+    background: linear-gradient(to right, #020022, #3dded9);
+    animation: gradientAnimation 0.1s normal;
+
+}
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(to right, #020022, #1f6b69);
+    }
+    25% {
+        background: linear-gradient(to right, #020022, #2fa9a5);
+    }
+    50% {
+        background: linear-gradient(to right, #020022, #31c7c4);
+    }
+    75% {
+        background: linear-gradient(to right, #020022, #23ccc7);
+    }
+    100% {
+        background: linear-gradient(to right, #020022, #3dded9);
+    }
+}
+span {
+    font-size: 20px
+}
+
+input[type="image" i] {
+    cursor:url('../images/cursor.cur'),auto;
+}
