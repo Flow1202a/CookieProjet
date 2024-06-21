@@ -14,11 +14,13 @@
     width: 63%;
     height: auto;
     margin-left: 20%;
+    cursor:url('/images/fightingcursor.cur'), auto;
+    user-select: none;
 }
+
 #Teemo:active{
     transform: scale(101%) rotate(2deg);
     transition: ease-in-out;
-
 }
 
 .cookie {
@@ -28,14 +30,16 @@
     margin-top: 3%;
 }
 
-.auto{
-    margin-top: -25%;
-    margin-left: 292%;
+.off {
+    background:linear-gradient(73deg, #020022, #1f6b69);
+    border: 1px solid rgb(198, 169, 3);
+    color: white;
 }
 
-.shop {
+.shop, .offcanvas-body,.offcanvas-header {
     background: linear-gradient(73deg, #020022, #1f6b69);
     border: 2px solid rgb(198, 169, 3);
+    cursor: url('/images/pointerlol.cur'), auto; 
 }
 
 .Abilities-btn{
@@ -44,11 +48,19 @@
     display: flex;
     justify-content: space-around;
     border: 1px solid rgb(198, 169, 3);
-
 }
 
-.Abilities-btn:hover {
+.Abilities-btn:hover, .dropdown-item:hover {
     border: 1px solid aquamarine;
+    cursor: url('/images/pointerlol.cur'), auto;
+}
+
+.dropdown-item:hover {
+   background:linear-gradient(73deg, #020022, #3dded9);;
+}
+
+.off:active, .dropdown-menu{
+    background:linear-gradient(73deg, #020022, #3dded9);
 }
 
 .Abilities-btn:active {
@@ -56,7 +68,6 @@
     transform: scale(101%);
     background: linear-gradient(to right, #020022, #3dded9);
     animation: gradientAnimation 0.1s normal;
-
 }
 @keyframes gradientAnimation {
     0% {
@@ -78,7 +89,58 @@
 span {
     font-size: 20px
 }
+.click-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.spike {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom;
+    width: 0;
+    height: 0;
+    background: #0d273c;
+    border-radius: 0.3mm;
+    transform: rotate(var(--angle)) translateY(var(--distance));
+}
 
-input[type="image" i] {
-    cursor:url('../images/cursor.cur'),auto;
+#spikeCount{
+    font-size: large;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom;
+    width: 0;
+    height: 0;
+    color: #0aa27d;
+    transform: rotate(var(--angle)) translateY(var(--distance));
+}
+.remover{
+    display: none;
+}
+.effect .spike {
+    animation: animate 0.45s;
+}
+@keyframes animate {
+    0% {
+        width: 3px;
+        height: 12px;
+        opacity: 0;
+        transform: rotate(var(--angle)) translateY(0);
+    }
+    2% {
+        width: 4px;
+        height: 16px;
+        opacity: 1;
+        transform: rotate(var(--angle)) translateY(0);
+    }
+    100% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+        transform: rotate(var(--angle)) translateY(var(--distance));
+    }
 }
