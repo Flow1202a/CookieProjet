@@ -2,13 +2,13 @@ let counterDisplayElem = document.querySelector('.counter-display');
 let counterPlusElem = document.querySelector('.counter-plus');
 let cpm = document.querySelector('.cpm');
 let count = 0;
-<<<<<<< HEAD
-let countCpm = 5//ajouter les multiplicateur ici
+let countCpm = 5;
+
+//ajouter les multiplicateur ici
 
 
 //update
-=======
-let countCpm = 5;//ajouter les multiplicateur ici
+
 let sheenCost = 100;
 let phageCost = 300;
 let trinityCost = 1000;
@@ -18,7 +18,7 @@ let infinityedgeCost = 200000;
 let igniteCost = 1000000;
 let exhaustCost = 2000000;
 let timer =0;
->>>>>>> Alexis
+
 updateCounter();
 updateCounterCpm();
 
@@ -122,10 +122,6 @@ document.getElementById('phage').addEventListener('click',function(){
     }
 });
 
-<<<<<<< HEAD
-
-
-=======
 //multiplicateur Trinity
 
 document.getElementById('trinityforce').addEventListener('click',function(){
@@ -193,4 +189,4 @@ document.getElementById('ignite').addEventListener('click',function(){
         }
     }
 });
->>>>>>> Alexis
+
