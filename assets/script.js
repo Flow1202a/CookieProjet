@@ -9,7 +9,7 @@ let trinityCost = 1000;
 let bfswordCost = 10000;
 let pickaxeCost = 50000;
 let infinityedgeCost = 200000;  
-let igniteCost = 1000000;
+let igniteCost = 0;
 let exhaustCost = 2000000;
 let timer =0;
 updateCounter();
@@ -147,7 +147,7 @@ document.getElementById('ignite').addEventListener('click',function(){
         alert("Not enough $$$! you need $" + igniteCost);
     } else {
         while (timer <60) {
-            countCpm*=4;
+            countCpm^=2;
             count -= igniteCost;
             igniteCost *= 2.0;
             cpm.innerHTML=countCpm;
