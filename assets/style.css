@@ -15,7 +15,9 @@
     height: auto;
     margin-left: 20%;
     cursor:pointer;
+    user-select: none;
 }
+
 #Teemo:active{
     transform: scale(101%) rotate(2deg);
     transition: ease-in-out;
