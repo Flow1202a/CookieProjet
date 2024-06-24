@@ -4,6 +4,27 @@ let cpm = document.querySelector('.cpm');
 let count = 0;
 let countCpm = 5;
 
+// items Inventory
+
+let sheenInventory = document.querySelector('.sheenInvent');
+sheenInventory.innerHTML = 0;
+
+let phageInventory = document.querySelector('.phageInvent');
+phageInventory.innerHTML = 0;
+
+let trinityInventory = document.querySelector('.trinityInvent');
+trinityInventory.innerHTML = 0;
+
+let bfswordInventory = document.querySelector('.bfswordInvent');
+bfswordInventory.innerHTML = 0;
+
+let pickaxeInventory = document.querySelector('.pickaxeInvent');
+pickaxeInventory.innerHTML = 0;
+
+let infinityedgeInventory = document.querySelector('.infinityInvent');
+infinityedgeInventory.innerHTML = 0;
+
+
 //ajouter les multiplicateur ici
 
 
@@ -21,6 +42,8 @@ let timer =0;
 
 updateCounter();
 updateCounterCpm();
+
+
 
 
 //clicker
@@ -106,6 +129,7 @@ document.getElementById('sheen').addEventListener('click',function(){
         count -= sheenCost;
         sheenCost *= 2.0;
         cpm.innerHTML=countCpm;
+        sheenInventory.innerHTML ++;
     }
 });
 
@@ -119,6 +143,7 @@ document.getElementById('phage').addEventListener('click',function(){
         count -= phageCost;
         phageCost *= 2.0;
         cpm.innerHTML=countCpm;
+        phageInventory.innerHTML ++;
     }
 });
 
@@ -132,6 +157,7 @@ document.getElementById('trinityforce').addEventListener('click',function(){
         count -= trinityCost;
         trinityCost *= 2.0;
         cpm.innerHTML=countCpm;
+        trinityInventory.innerHTML ++;
     }
 });
 
@@ -145,6 +171,7 @@ document.getElementById('bfsword').addEventListener('click',function(){
         count -= bfswordCost;
         bfswordCost *= 2.0;
         cpm.innerHTML=countCpm;
+        bfswordInventory.innerHTML ++;
     }
 });
 
@@ -157,6 +184,7 @@ document.getElementById('pickaxe').addEventListener('click',function(){
         count -= pickaxeCost;
         pickaxeCost *= 2.0;
         cpm.innerHTML=countCpm;
+        pickaxeInventory.innerHTML ++;
     }
 });
 
@@ -169,6 +197,7 @@ document.getElementById('infinityedge').addEventListener('click',function(){
         count -= infinityedgeCost;
         infinityedgeCost *= 2.0;
         cpm.innerHTML=countCpm;
+        infinityedgeInventory.innerHTML ++;
     }
 });
 
