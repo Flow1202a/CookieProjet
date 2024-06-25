@@ -175,18 +175,3 @@ document.getElementById('infinityedge').addEventListener('click',function(){
 
 //BUFF IGNITE
 
-document.getElementById('ignite').addEventListener('click',function(){
-    if (count<igniteCost) {
-        alert("Not enough $$$! you need $" + igniteCost);
-    } else {
-        while (timer <60) {
-            countCpm*=4;
-            count -= igniteCost;
-            igniteCost *= 2.0;
-            cpm.innerHTML=countCpm;
-            intervalId = setInterval(function (){
-                timer += 1;
-            },1000)
-        }
-    }
-});
