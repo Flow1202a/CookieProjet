@@ -1,12 +1,22 @@
+@font-face {
+    font-family: 'beaufort';
+    src: url(/font/BeaufortforLOL-Bold.otf);
+}
+
 body {
     background-image: url(/images/backgroundteemo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     user-select: none;
     overflow-x: hidden;
+    font-family: 'beaufort',sans-serif;
 }
 .head {
     padding-top:1%;
+}
+
+h1, h2, h3 {
+    
 }
 
 #score {
@@ -33,13 +43,13 @@ body {
 
 .off {
     background:linear-gradient(73deg, #020022, #1f6b69);
-    border: 1px solid rgb(198, 169, 3);
+    border: 1px solid rgb(200, 155, 60);
     color: white;
 }
 
 .shop, .offcanvas-body,.offcanvas-header {
     background: linear-gradient(73deg, #020022, #1f6b69);
-    border: 2px solid rgb(198, 169, 3);
+    border: 2px solid rgb(200, 155, 60);
     cursor: url('/images/pointerlol.cur'), auto; 
 }
 
@@ -48,7 +58,7 @@ body {
     margin-bottom: 1%;
     display: flex;
     justify-content: space-around;
-    border: 1px solid rgb(198, 169, 3);
+    border: 1px solid rgb(200, 155, 60);
 }
 
 .Abilities-btn:hover, .dropdown-item:hover {
