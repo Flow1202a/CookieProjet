@@ -4,6 +4,9 @@ let cpm = document.querySelector('.cpm');
 let count = 0;
 let countCpm = 5;
 
+// audio test
+let audioTeemo = new Audio("/images/teemo_4.mp3");
+
 // items Inventory
 
 let sheenInventory = document.querySelector('.sheenInvent');
@@ -24,9 +27,7 @@ pickaxeInventory.innerHTML = 0;
 let infinityedgeInventory = document.querySelector('.infinityInvent');
 infinityedgeInventory.innerHTML = 0;
 
-
 //ajouter les multiplicateur ici
-
 
 //update
 
@@ -44,10 +45,9 @@ updateCounter();
 updateCounterCpm();
 
 
-
-
 //clicker
 counterPlusElem.addEventListener("click",()=>{
+    audioTeemo.play();
     if(countCpm === 1){
         count++;
     }

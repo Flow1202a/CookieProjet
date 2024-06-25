@@ -2,8 +2,9 @@ body {
     background-image: url(/images/backgroundteemo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    user-select: none;
+    overflow-x: hidden;
 }
-
 .head {
     padding-top:1%;
 }
@@ -16,7 +17,6 @@ body {
     height: auto;
     margin-left: 20%;
     cursor:url('/images/fightingcursor.cur'), auto;
-    user-select: none;
 }
 
 #Teemo:active{
