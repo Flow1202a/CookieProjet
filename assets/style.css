@@ -1,7 +1,21 @@
+<<<<<<< HEAD
 .gametitle-custom {
     --bs-navbar-color: red;
+=======
+@font-face {
+    font-family: 'beaufort';
+    src: url(/font/BeaufortforLOL-Bold.otf);
+>>>>>>> leo
 }
 
+body {
+    background-image: url(/images/backgroundteemo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    user-select: none;
+    overflow-x: hidden;
+    font-family: 'beaufort',sans-serif;
+}
 .head {
     padding-top:1%;
 }
@@ -14,7 +28,6 @@
     height: auto;
     margin-left: 20%;
     cursor:url('/images/fightingcursor.cur'), auto;
-    user-select: none;
 }
 
 #Teemo:active{
@@ -29,9 +42,13 @@
     margin-top: 3%;
 }
 
+<<<<<<< HEAD
 .off , .on{
+=======
+.off, .on {
+>>>>>>> leo
     background:linear-gradient(73deg, #020022, #1f6b69);
-    border: 1px solid rgb(198, 169, 3);
+    border: 1px solid rgb(200, 155, 60);
     color: white;
     border-radius: 7px;
 }
@@ -39,9 +56,18 @@
 .shop, .offcanvas-body,.offcanvas-header {
 
     background: linear-gradient(73deg, #020022, #1f6b69);
+<<<<<<< HEAD
     border: 2px solid rgb(198, 169, 3);
     border-radius: 7px;
     cursor: url('/images/pointerlol.cur'), auto; 
+=======
+    border: 2px solid rgb(200, 155, 60);
+    cursor: url('/images/pointerlol.cur'), auto;
+}
+
+.shop {
+    border-radius: 7px;
+>>>>>>> leo
 }
 
 .Abilities-btn{
@@ -49,7 +75,11 @@
     margin-bottom: 1%;
     display: flex;
     justify-content: space-around;
+<<<<<<< HEAD
     border: 1px solid rgb(198, 169, 3);
+=======
+    border: 1px solid rgb(200, 155, 60);
+>>>>>>> leo
     border-radius: 7px;
 }
 
