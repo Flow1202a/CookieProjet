@@ -37,16 +37,21 @@ body {
     margin-top: 3%;
 }
 
-.off {
+.off, .on {
     background:linear-gradient(73deg, #020022, #1f6b69);
     border: 1px solid rgb(200, 155, 60);
     color: white;
+    border-radius: 7px;
 }
 
 .shop, .offcanvas-body,.offcanvas-header {
     background: linear-gradient(73deg, #020022, #1f6b69);
     border: 2px solid rgb(200, 155, 60);
-    cursor: url('/images/pointerlol.cur'), auto; 
+    cursor: url('/images/pointerlol.cur'), auto;
+}
+
+.shop {
+    border-radius: 7px;
 }
 
 .Abilities-btn{
@@ -55,6 +60,7 @@ body {
     display: flex;
     justify-content: space-around;
     border: 1px solid rgb(200, 155, 60);
+    border-radius: 7px;
 }
 
 .Abilities-btn:hover, .dropdown-item:hover {
