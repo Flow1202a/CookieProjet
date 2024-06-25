@@ -1,6 +1,7 @@
-
-.gametitle-custom {
-    --bs-navbar-color: red;
+body {
+    background-image: url(/images/backgroundteemo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .head {
