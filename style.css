@@ -1,19 +1,19 @@
 @font-face {
     font-family: 'beaufort';
-    src: url(../font/BeaufortforLOL-Bold.otf);
+    src: url(font/BeaufortforLOL-Bold.otf);
 }
 
 body {
-    background-image: url(../images/backgroundteemo.jpg);
+    background-image: url(images/backgroundteemo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     user-select: none;
     overflow-x: hidden;
     font-family: 'beaufort',sans-serif;
-    cursor: url('../images/pointerlol.cur'), none;
+    cursor: url('images/pointerlol.cur'), none;
 }
 #toggleButton{
-    cursor:url('../images/pointerlol.cur'), crosshair;
+    cursor:url('images/pointerlol.cur'), crosshair;
 }
 .container {
     overflow-x: hidden;
@@ -27,20 +27,20 @@ body {
 }
 
 .click-effect {
-    cursor:url('../images/fightingcursor.cur'), auto;
+    cursor:url('images/fightingcursor.cur'), auto;
 }
 
 #Teemo{
     width: 63%;
     height: auto;
     margin-left: 20%;
-    cursor:url('../images/fightingcursor.cur'), auto;
+    cursor:url('images/fightingcursor.cur'), auto;
 }
 
 #Teemo:active{
     transform: scale(101%) rotate(2deg);
     transition: ease-in-out;
-    cursor:url('../images/fightingcursor.cur'), auto;
+    cursor:url('images/fightingcursor.cur'), auto;
 }
 
 .cookie {
@@ -79,7 +79,7 @@ body {
 
 .Abilities-btn:hover, .dropdown-item:hover {
     border: 1px solid aquamarine;
-    cursor: url('../images/pointerlol.cur'), auto;
+    cursor: url('images/pointerlol.cur'), auto;
 }
 
 .dropdown-item:hover {
