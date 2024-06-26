@@ -6,14 +6,15 @@ let countCpm = 5;
 let btn = document.querySelector(".counter-plus");
 let animationInProgress = false;
 let animationId;
+let resetScore = document.querySelector(".resetScore");
 let sheenCost = 100;
 let phageCost = 300;
 let trinityCost = 1000;
 let bfswordCost = 10000;
 let pickaxeCost = 50000;
 let infinityedgeCost = 200000;
-let igniteCost = 1000000;
-let exhaustCost = 2000000;
+let igniteCost = 500000;
+let exhaustCost = 1000000;
 let timer =0;
 
 // audio test
@@ -102,6 +103,13 @@ btn.addEventListener("click", (e) => {
         animationInProgress = false;
     }, 500);
 });
+
+resetScore.addEventListener("click", ()=>{
+    counterDisplayElem.innerHTML = 0;
+    count = 0;
+    cpm.innerHTML = 5;
+    countCpm = 5
+})
 
 
 //Fonctions
@@ -209,3 +217,25 @@ document.getElementById('infinityedge').addEventListener('click',function(){
     updateCounterCpm();
 });
 //BUFF IGNITE
+//multiplicateur InfinityEdge
+document.getElementById('ignite').addEventListener('click',function(){
+    let counterValueBefore = countCpm
+    countCpm = countCpm * countCpm
+    updateCounterCpm();
+    intervalId = setTimeout(function (){
+        countCpm = counterValueBefore
+        updateCounterCpm();
+    },10000)
+
+});
+
+document.getElementById('exhaust').addEventListener('click',function(){
+    let counterValueBefore = countCpm
+    countCpm = countCpm * countCpm * countCpm * countCpm
+    updateCounterCpm();
+    intervalId = setTimeout(function (){
+        countCpm = counterValueBefore
+        updateCounterCpm();
+    },5000)
+
+});

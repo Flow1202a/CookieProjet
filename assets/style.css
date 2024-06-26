@@ -1,3 +1,9 @@
+body{
+    cursor:url('../images/pointerlol.cur'), crosshair;
+}
+body:active{
+    cursor:url('../images/fightingcursor.cur'), crosshair;
+}
 .gametitle-custom {
     --bs-navbar-color: red;
 }
@@ -14,7 +20,9 @@ body {
     overflow-x: hidden;
     font-family: 'beaufort',sans-serif;
 }
-
+#toggleButton{
+    cursor:url('../images/pointerlol.cur'), crosshair;
+}
 .container {
     overflow-x: hidden;
 }
@@ -35,6 +43,7 @@ body {
 #Teemo:active{
     transform: scale(101%) rotate(2deg);
     transition: ease-in-out;
+    cursor:url('../images/fightingcursor.cur'), auto;
 }
 
 .cookie {
@@ -49,6 +58,7 @@ body {
     border: 1px solid rgb(200, 155, 60);
     color: white;
     border-radius: 7px;
+
 }
 
 .shop, .offcanvas-body,.offcanvas-header {
