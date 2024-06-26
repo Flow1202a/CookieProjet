@@ -1,3 +1,6 @@
+.gametitle-custom {
+    --bs-navbar-color: red;
+}
 @font-face {
     font-family: 'beaufort';
     src: url(/font/BeaufortforLOL-Bold.otf);
@@ -50,7 +53,8 @@ body {
 
 .shop, .offcanvas-body,.offcanvas-header {
     background: linear-gradient(73deg, #020022, #1f6b69);
-    border: 2px solid rgb(200, 155, 60);
+    border: 2px solid rgb(198, 169, 3);
+    border-radius: 7px;
     cursor: url('/images/pointerlol.cur'), auto;
 }
 
@@ -63,7 +67,7 @@ body {
     margin-bottom: 1%;
     display: flex;
     justify-content: space-around;
-    border: 1px solid rgb(200, 155, 60);
+    border: 1px solid rgb(198, 169, 3);
     border-radius: 7px;
 }
 
@@ -86,6 +90,7 @@ body {
     background: linear-gradient(to right, #020022, #3dded9);
     animation: gradientAnimation 0.1s normal;
 }
+
 @keyframes gradientAnimation {
     0% {
         background: linear-gradient(to right, #020022, #1f6b69);
@@ -103,14 +108,17 @@ body {
         background: linear-gradient(to right, #020022, #3dded9);
     }
 }
+
 span {
     font-size: 20px
 }
+
 .click-effect {
     position: absolute;
     top: 50%;
     left: 50%;
 }
+
 .spike {
     position: absolute;
     bottom: 0;
@@ -118,13 +126,28 @@ span {
     transform-origin: bottom;
     width: 0;
     height: 0;
-    background: white;
+    background: #0d273c;
     border-radius: 0.3mm;
     transform: rotate(var(--angle)) translateY(var(--distance));
 }
-.effect .spike {
-    animation: animate 0.75s;
+
+#spikeCount{
+    font-size: large;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom;
+    width: 0;
+    height: 0;
+    color: #0aa27d;
+    transform: rotate(var(--angle)) translateY(var(--distance));
 }
+
+.remover {
+    display: none;
+}
+
 @keyframes animate {
     0% {
         width: 3px;
@@ -139,10 +162,15 @@ span {
         transform: rotate(var(--angle)) translateY(0);
     }
     100% {
-        width: 0px;
-        height: 0px;
+        width: 0;
+        height: 0;
         opacity: 1;
         transform: rotate(var(--angle)) translateY(var(--distance));
     }
+}
+
+
+.effect .spike {
+    animation: animate 0.45s;
 }
 

@@ -1,53 +1,45 @@
 let counterDisplayElem = document.querySelector('.counter-display');
 let counterPlusElem = document.querySelector('.counter-plus');
 let cpm = document.querySelector('.cpm');
-let count = 0;
+let count = localStorage.getItem('score') ? parseInt(localStorage.getItem('score')) : 0;
 let countCpm = 5;
-
-// audio test
-let audioTeemo = new Audio("/images/teemo_4.mp3");
-
-// items Inventory
-
-let sheenInventory = document.querySelector('.sheenInvent');
-sheenInventory.innerHTML = 0;
-
-let phageInventory = document.querySelector('.phageInvent');
-phageInventory.innerHTML = 0;
-
-let trinityInventory = document.querySelector('.trinityInvent');
-trinityInventory.innerHTML = 0;
-
-let bfswordInventory = document.querySelector('.bfswordInvent');
-bfswordInventory.innerHTML = 0;
-
-let pickaxeInventory = document.querySelector('.pickaxeInvent');
-pickaxeInventory.innerHTML = 0;
-
-let infinityedgeInventory = document.querySelector('.infinityInvent');
-infinityedgeInventory.innerHTML = 0;
-
-//ajouter les multiplicateur ici
-
-//update
-
+let btn = document.querySelector(".counter-plus");
+let animationInProgress = false;
+let animationId;
 let sheenCost = 100;
 let phageCost = 300;
 let trinityCost = 1000;
 let bfswordCost = 10000;
 let pickaxeCost = 50000;
-let infinityedgeCost = 200000;  
+let infinityedgeCost = 200000;
 let igniteCost = 1000000;
 let exhaustCost = 2000000;
 let timer =0;
 
+// audio test
+let audioTeemo = new Audio("/images/teemo_4.mp3");
+// items Inventory
+let sheenInventory = document.querySelector('.sheenInvent');
+sheenInventory.innerHTML = 0;
+let phageInventory = document.querySelector('.phageInvent');
+phageInventory.innerHTML = 0;
+let trinityInventory = document.querySelector('.trinityInvent');
+trinityInventory.innerHTML = 0;
+let bfswordInventory = document.querySelector('.bfswordInvent');
+bfswordInventory.innerHTML = 0;
+let pickaxeInventory = document.querySelector('.pickaxeInvent');
+pickaxeInventory.innerHTML = 0;
+let infinityedgeInventory = document.querySelector('.infinityInvent');
+infinityedgeInventory.innerHTML = 0;
+
+//update
 updateCounter();
 updateCounterCpm();
-
 
 //clicker
 counterPlusElem.addEventListener("click",()=>{
     audioTeemo.play();
+
     if(countCpm === 1){
         count++;
     }
@@ -55,6 +47,7 @@ counterPlusElem.addEventListener("click",()=>{
         count +=  countCpm
     }
     updateCounter();
+    localStorage.setItem('score',count)
 }) ;
 
 //autoClicker
@@ -81,30 +74,33 @@ document.getElementById('toggleButton').addEventListener('click', function() {
         clearInterval(intervalId);
 
     }
+
 });
 
+
 //impact click
-let btn = document.querySelector(".counter-plus");
-let animationInProgress = false;
-let animationId;
 btn.addEventListener("click", (e) => {
     const clickEffect = document.querySelector(".click-effect");
-
+    let countSpike = document.getElementById("spikeCount")
+    countSpike.innerText = countCpm
     if (animationInProgress) {
         clearTimeout(animationId);
         clickEffect.classList.remove("effect");
+        countSpike.classList.remove("remover");
         void clickEffect.offsetWidth;
     }
-
+    countSpike.classList.remove("remover");
     clickEffect.style.top = e.clientY + window.scrollY + "px";
     clickEffect.style.left = e.clientX + window.scrollX + "px";
+    countSpike.classList.add("effect");
     clickEffect.classList.add("effect");
     animationInProgress = true;
 
     animationId = setTimeout(() => {
         clickEffect.classList.remove("effect");
+        countSpike.classList.add("remover")
         animationInProgress = false;
-    }, 750);
+    }, 500);
 });
 
 
@@ -200,22 +196,6 @@ document.getElementById('infinityedge').addEventListener('click',function(){
         infinityedgeInventory.innerHTML ++;
     }
 });
-
 //BUFF IGNITE
 
-document.getElementById('ignite').addEventListener('click',function(){
-    if (count<igniteCost) {
-        alert("Not enough $$$! you need $" + igniteCost);
-    } else {
-        while (timer <60) {
-            countCpm*=4;
-            count -= igniteCost;
-            igniteCost *= 2.0;
-            cpm.innerHTML=countCpm;
-            intervalId = setInterval(function (){
-                timer += 1;
-            },1000)
-        }
-    }
-});
-
+console.log(localStorage)
