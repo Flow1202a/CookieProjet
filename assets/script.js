@@ -13,10 +13,8 @@ let trinityCost = 1000;
 let bfswordCost = 10000;
 let pickaxeCost = 50000;
 let infinityedgeCost = 200000;
-let igniteCost = 500000;
-let exhaustCost = 1000000;
-let timer =0;
-const champ =document.getElementById("Teemo");
+let igniteCost = 1000000;
+let exhaustCost = 2000000;
 let img=0;
 // audio test
 let audioTeemo = new Audio("../images/teemo_4.mp3");
@@ -257,22 +255,6 @@ document.getElementById('infinityedge').addEventListener('click',function(){
     updateCounter();
     updateCounterCpm();
 });
-//BUFF IGNITE
-let countcar= countCpm * countCpm;
-document.getElementById('ignite').addEventListener('click',function(){
-    if (count<igniteCost) {
-        alert("Not enough $$$! you need $" + igniteCost);
-    } else {
-        countcar;
-        count -= igniteCost;
-        igniteCost *= 2.0;
-        cpm.innerHTML=countCpm;
-        intervalId = setInterval(function (){
-            timer += 1;
-        },1000)
-}  
-});
-
 //Change Champ;
 
 document.getElementById('swap-champ').addEventListener('click',function () {
@@ -288,23 +270,32 @@ document.getElementById('swap-champ').addEventListener('click',function () {
 //multiplicateur InfinityEdge
 
 document.getElementById('ignite').addEventListener('click',function(){
-    let counterValueBefore = countCpm
-    countCpm = countCpm * countCpm
-    updateCounterCpm();
-    intervalId = setTimeout(function (){
-        countCpm = counterValueBefore
-        updateCounterCpm();
-    },10000)
+   if (count < igniteCost){
+       alert("Not enough $$$! you need $" + igniteCost)
+   }else {
+       let counterValueBefore = countCpm
+       countCpm = countCpm * countCpm
+       updateCounterCpm();
+       intervalId = setTimeout(function (){
+           countCpm = counterValueBefore
+           updateCounterCpm();
+       },10000)
+   }
 
 });
 
 document.getElementById('exhaust').addEventListener('click',function(){
-    let counterValueBefore = countCpm
-    countCpm = countCpm * countCpm * countCpm * countCpm
-    updateCounterCpm();
-    intervalId = setTimeout(function (){
-        countCpm = counterValueBefore
+    if (count <exhaustCost){
+        alert("Not enough $$$! you need $" + exhaustCost)
+
+    }else {
+        let counterValueBefore = countCpm
+        countCpm = countCpm * countCpm * countCpm * countCpm
         updateCounterCpm();
-    },5000)
+        intervalId = setTimeout(function (){
+            countCpm = counterValueBefore
+            updateCounterCpm();
+        },5000)
+    }
 
 });
