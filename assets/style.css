@@ -3,11 +3,11 @@
 }
 @font-face {
     font-family: 'beaufort';
-    src: url(/font/BeaufortforLOL-Bold.otf);
+    src: url(../font/BeaufortforLOL-Bold.otf);
 }
 
 body {
-    background-image: url(/images/backgroundteemo.jpg);
+    background-image: url(../images/backgroundteemo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     user-select: none;
@@ -29,7 +29,7 @@ body {
     width: 63%;
     height: auto;
     margin-left: 20%;
-    cursor:url('/images/fightingcursor.cur'), auto;
+    cursor:url('../images/fightingcursor.cur'), auto;
 }
 
 #Teemo:active{
@@ -55,7 +55,7 @@ body {
     background: linear-gradient(73deg, #020022, #1f6b69);
     border: 2px solid rgb(198, 169, 3);
     border-radius: 7px;
-    cursor: url('/images/pointerlol.cur'), auto;
+    cursor: url('../images/pointerlol.cur'), auto;
 }
 
 .shop {
@@ -73,7 +73,7 @@ body {
 
 .Abilities-btn:hover, .dropdown-item:hover {
     border: 1px solid aquamarine;
-    cursor: url('/images/pointerlol.cur'), auto;
+    cursor: url('../images/pointerlol.cur'), auto;
 }
 
 .dropdown-item:hover {
