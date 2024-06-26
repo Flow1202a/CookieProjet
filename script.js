@@ -17,7 +17,7 @@ let igniteCost = 1000000;
 let exhaustCost = 2000000;
 let img=0;
 // audio test
-let audioTeemo = new Audio("../images/teemo_4.mp3");
+let audioTeemo = new Audio("images/teemo_4.mp3");
 //button on/off audio
 let buttonSound = document.querySelector('.sound');
 
@@ -259,10 +259,10 @@ document.getElementById('infinityedge').addEventListener('click',function(){
 
 document.getElementById('swap-champ').addEventListener('click',function () {
     if (img === 0) {
-        document.getElementById('Teemo').src = "../images/yuumi.png";
+        document.getElementById('Teemo').src = "images/yuumi.png";
         img +=1;
     } else {
-       document.getElementById('Teemo').src = "../images/pngwing.com.png";
+       document.getElementById('Teemo').src = "images/pngwing.com.png";
        img -=1; 
     }
 
