@@ -18,10 +18,7 @@ let exhaustCost = 1000000;
 let timer =0;
 
 // audio test
-<<<<<<< HEAD
 let audioTeemo = new Audio("../images/teemo_4.mp3");
-=======
-let audioTeemo = new Audio("/images/teemo_4.mp3");
 //button on/off audio
 let buttonSound = document.querySelector('.sound');
 
@@ -40,8 +37,6 @@ buttonSound.addEventListener('click', ()=> {
 
 })
 
-
->>>>>>> leo
 // items Inventory
 let sheenInventory = document.querySelector('.sheenInvent');
 sheenInventory.innerHTML = 0;
