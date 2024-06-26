@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     cursor:url('../images/pointerlol.cur'), crosshair;
 }
@@ -7,6 +8,9 @@ body:active{
 .gametitle-custom {
     --bs-navbar-color: red;
 }
+=======
+
+>>>>>>> leo
 @font-face {
     font-family: 'beaufort';
     src: url(../font/BeaufortforLOL-Bold.otf);
@@ -19,6 +23,7 @@ body {
     user-select: none;
     overflow-x: hidden;
     font-family: 'beaufort',sans-serif;
+    cursor: url('../images/pointerlol.cur'), none;
 }
 #toggleButton{
     cursor:url('../images/pointerlol.cur'), crosshair;
@@ -33,6 +38,11 @@ body {
 #score {
     padding-top: 2%;
 }
+
+.click-effect {
+    cursor:url('../images/fightingcursor.cur'), auto;
+}
+
 #Teemo{
     width: 63%;
     height: auto;
@@ -52,7 +62,9 @@ body {
 .abilities{
     margin-top: 3%;
 }
-
+#toggleButton {
+    cursor: url('../images/pointerlol.cur'), none;
+}
 .off, .on {
     background:linear-gradient(73deg, #020022, #1f6b69);
     border: 1px solid rgb(200, 155, 60);
@@ -65,7 +77,6 @@ body {
     background: linear-gradient(73deg, #020022, #1f6b69);
     border: 2px solid rgb(198, 169, 3);
     border-radius: 7px;
-    cursor: url('../images/pointerlol.cur'), auto;
 }
 
 .shop {

@@ -18,7 +18,30 @@ let exhaustCost = 1000000;
 let timer =0;
 
 // audio test
+<<<<<<< HEAD
 let audioTeemo = new Audio("../images/teemo_4.mp3");
+=======
+let audioTeemo = new Audio("/images/teemo_4.mp3");
+//button on/off audio
+let buttonSound = document.querySelector('.sound');
+
+buttonSound.addEventListener('click', ()=> {
+    if(buttonSound.classList.contains('on')) {
+        buttonSound.classList.remove('on');
+        buttonSound.classList.add('off')
+        buttonSound.innerHTML = 'sound: Off';
+        audioTeemo.volume = 0.0;
+    }else {
+        buttonSound.classList.remove('off');
+        buttonSound.classList.add('on')
+        buttonSound.innerHTML = 'sound: On';
+        audioTeemo.volume = 1;
+    }
+
+})
+
+
+>>>>>>> leo
 // items Inventory
 let sheenInventory = document.querySelector('.sheenInvent');
 sheenInventory.innerHTML = 0;
@@ -40,7 +63,6 @@ updateCounterCpm();
 //clicker
 counterPlusElem.addEventListener("click",()=>{
     audioTeemo.play();
-
     if(countCpm === 1){
         count++;
     }
