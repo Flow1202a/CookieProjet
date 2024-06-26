@@ -6,19 +6,38 @@ let countCpm = 5;
 let btn = document.querySelector(".counter-plus");
 let animationInProgress = false;
 let animationId;
+let resetScore = document.querySelector(".resetScore");
 let sheenCost = 100;
 let phageCost = 300;
 let trinityCost = 1000;
 let bfswordCost = 10000;
 let pickaxeCost = 50000;
 let infinityedgeCost = 200000;
-let igniteCost = 1000000;
-let exhaustCost = 2000000;
+let igniteCost = 500000;
+let exhaustCost = 1000000;
 let timer =0;
 const champ =document.getElementById("Teemo");
 let img=0;
 // audio test
-let audioTeemo = new Audio("/images/teemo_4.mp3");
+let audioTeemo = new Audio("../images/teemo_4.mp3");
+//button on/off audio
+let buttonSound = document.querySelector('.sound');
+
+buttonSound.addEventListener('click', ()=> {
+    if(buttonSound.classList.contains('on')) {
+        buttonSound.classList.remove('on');
+        buttonSound.classList.add('off')
+        buttonSound.innerHTML = 'sound: Off';
+        audioTeemo.volume = 0.0;
+    }else {
+        buttonSound.classList.remove('off');
+        buttonSound.classList.add('on')
+        buttonSound.innerHTML = 'sound: On';
+        audioTeemo.volume = 1;
+    }
+
+})
+
 // items Inventory
 let sheenInventory = document.querySelector('.sheenInvent');
 sheenInventory.innerHTML = 0;
@@ -57,15 +76,14 @@ updateCounterCpm();
 //clicker
 counterPlusElem.addEventListener("click",()=>{
     audioTeemo.play();
-
     if(countCpm === 1){
         count++;
     }
     else {
         count +=  countCpm
     }
-    updateCounter();
     localStorage.setItem('score',count)
+    updateCounter();
 }) ;
 
 //autoClicker
@@ -121,6 +139,13 @@ btn.addEventListener("click", (e) => {
     }, 500);
 });
 
+resetScore.addEventListener("click", ()=>{
+    counterDisplayElem.innerHTML = 0;
+    count = 0;
+    cpm.innerHTML = 5;
+    countCpm = 5
+})
+
 
 //Fonctions
 
@@ -146,6 +171,8 @@ document.getElementById('sheen').addEventListener('click',function(){
         sheenCostShow.innerHTML *=2;
         sheenInventory.innerHTML ++;
     }
+    updateCounter();
+    updateCounterCpm();
 });
 
 //multiplicateur phage
@@ -161,6 +188,8 @@ document.getElementById('phage').addEventListener('click',function(){
         phageInventory.innerHTML ++;
         phageCostShow.innerHTML *=2.0;
     }
+    updateCounter();
+    updateCounterCpm();
 });
 
 //multiplicateur Trinity
@@ -176,6 +205,8 @@ document.getElementById('trinityforce').addEventListener('click',function(){
         trinityInventory.innerHTML ++;
         trinityCostShow.innerHTML *=2.0;
     }
+    updateCounter();
+    updateCounterCpm();
 });
 
 //multiplicateur BF Sword
@@ -191,6 +222,8 @@ document.getElementById('bfsword').addEventListener('click',function(){
         bfswordInventory.innerHTML ++;
         bfswordCostShow.innerHTML *=2.0;
     }
+    updateCounter();
+    updateCounterCpm();
 });
 
 //multiplicateur Pickaxe
@@ -205,6 +238,8 @@ document.getElementById('pickaxe').addEventListener('click',function(){
         pickaxeInventory.innerHTML ++;
         pickaxeCostShow.innerHTML *=2.0;
     }
+    updateCounter();
+    updateCounterCpm();
 });
 
 //multiplicateur InfinityEdge
@@ -219,6 +254,8 @@ document.getElementById('infinityedge').addEventListener('click',function(){
         infinityedgeInventory.innerHTML ++;
         infinityCostShow.innerHTML *=2.0;
     }
+    updateCounter();
+    updateCounterCpm();
 });
 //BUFF IGNITE
 let countcar= countCpm * countCpm;
@@ -248,3 +285,25 @@ document.getElementById('swap-champ').addEventListener('click',function () {
     }
 
 })
+//multiplicateur InfinityEdge
+document.getElementById('ignite').addEventListener('click',function(){
+    let counterValueBefore = countCpm
+    countCpm = countCpm * countCpm
+    updateCounterCpm();
+    intervalId = setTimeout(function (){
+        countCpm = counterValueBefore
+        updateCounterCpm();
+    },10000)
+
+});
+
+document.getElementById('exhaust').addEventListener('click',function(){
+    let counterValueBefore = countCpm
+    countCpm = countCpm * countCpm * countCpm * countCpm
+    updateCounterCpm();
+    intervalId = setTimeout(function (){
+        countCpm = counterValueBefore
+        updateCounterCpm();
+    },5000)
+
+});
