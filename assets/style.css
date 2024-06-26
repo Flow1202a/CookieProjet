@@ -71,9 +71,10 @@ body {
     background:linear-gradient(73deg, #020022, #1f6b69);
     margin-bottom: 1%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     border: 1px solid rgb(198, 169, 3);
     border-radius: 7px;
+    text-align: end;
 }
 
 .Abilities-btn:hover, .dropdown-item:hover {
