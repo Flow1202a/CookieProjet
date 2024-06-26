@@ -12,7 +12,7 @@ let trinityCost = 1000;
 let bfswordCost = 10000;
 let pickaxeCost = 50000;
 let infinityedgeCost = 200000;
-let igniteCost = 1000000;
+let igniteCost = 0;
 let exhaustCost = 2000000;
 let timer =0;
 let counter = document.getElementById("countSpike")
@@ -174,19 +174,17 @@ document.getElementById('infinityedge').addEventListener('click',function(){
 });
 
 //BUFF IGNITE
-
+let countcar= countCpm * countCpm;
 document.getElementById('ignite').addEventListener('click',function(){
     if (count<igniteCost) {
         alert("Not enough $$$! you need $" + igniteCost);
     } else {
-        while (timer <60) {
-            countCpm^=2;
-            count -= igniteCost;
-            igniteCost *= 2.0;
-            cpm.innerHTML=countCpm;
-            intervalId = setInterval(function (){
-                timer += 1;
-            },1000)
-        }
-    }
+        countcar;
+        count -= igniteCost;
+        igniteCost *= 2.0;
+        cpm.innerHTML=countCpm;
+        intervalId = setInterval(function (){
+            timer += 1;
+        },1000)
+}  
 });
