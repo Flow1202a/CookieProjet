@@ -17,7 +17,7 @@ let exhaustCost = 2000000;
 let timer =0;
 
 // audio test
-let audioTeemo = new Audio("/images/teemo_4.mp3");
+let audioTeemo = new Audio("../images/teemo_4.mp3");
 // items Inventory
 let sheenInventory = document.querySelector('.sheenInvent');
 sheenInventory.innerHTML = 0;
@@ -46,8 +46,8 @@ counterPlusElem.addEventListener("click",()=>{
     else {
         count +=  countCpm
     }
-    updateCounter();
     localStorage.setItem('score',count)
+    updateCounter();
 }) ;
 
 //autoClicker
@@ -127,6 +127,8 @@ document.getElementById('sheen').addEventListener('click',function(){
         cpm.innerHTML=countCpm;
         sheenInventory.innerHTML ++;
     }
+    updateCounter();
+    updateCounterCpm();
 });
 
 //multiplicateur phage
@@ -141,6 +143,8 @@ document.getElementById('phage').addEventListener('click',function(){
         cpm.innerHTML=countCpm;
         phageInventory.innerHTML ++;
     }
+    updateCounter();
+    updateCounterCpm();
 });
 
 //multiplicateur Trinity
@@ -155,6 +159,8 @@ document.getElementById('trinityforce').addEventListener('click',function(){
         cpm.innerHTML=countCpm;
         trinityInventory.innerHTML ++;
     }
+    updateCounter();
+    updateCounterCpm();
 });
 
 //multiplicateur BF Sword
@@ -169,6 +175,8 @@ document.getElementById('bfsword').addEventListener('click',function(){
         cpm.innerHTML=countCpm;
         bfswordInventory.innerHTML ++;
     }
+    updateCounter();
+    updateCounterCpm();
 });
 
 //multiplicateur Pickaxe
@@ -182,6 +190,8 @@ document.getElementById('pickaxe').addEventListener('click',function(){
         cpm.innerHTML=countCpm;
         pickaxeInventory.innerHTML ++;
     }
+    updateCounter();
+    updateCounterCpm();
 });
 
 //multiplicateur InfinityEdge
@@ -195,7 +205,7 @@ document.getElementById('infinityedge').addEventListener('click',function(){
         cpm.innerHTML=countCpm;
         infinityedgeInventory.innerHTML ++;
     }
+    updateCounter();
+    updateCounterCpm();
 });
 //BUFF IGNITE
-
-console.log(localStorage)
