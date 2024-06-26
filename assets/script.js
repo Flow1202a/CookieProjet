@@ -235,6 +235,7 @@ document.getElementById('infinityedge').addEventListener('click',function(){
 });
 //BUFF IGNITE
 //multiplicateur InfinityEdge
+
 document.getElementById('ignite').addEventListener('click',function(){
     let counterValueBefore = countCpm
     countCpm = countCpm * countCpm
