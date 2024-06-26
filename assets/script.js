@@ -1,7 +1,7 @@
 let counterDisplayElem = document.querySelector('.counter-display');
 let counterPlusElem = document.querySelector('.counter-plus');
 let cpm = document.querySelector('.cpm');
-let count = 0;
+let count = localStorage.getItem('score') ? parseInt(localStorage.getItem('score')) : 0;
 let countCpm = 5;
 let btn = document.querySelector(".counter-plus");
 let animationInProgress = false;
@@ -15,14 +15,31 @@ let infinityedgeCost = 200000;
 let igniteCost = 0;
 let exhaustCost = 2000000;
 let timer =0;
-let counter = document.getElementById("countSpike")
-counter = parseInt(cpm)
+
+// audio test
+let audioTeemo = new Audio("/images/teemo_4.mp3");
+// items Inventory
+let sheenInventory = document.querySelector('.sheenInvent');
+sheenInventory.innerHTML = 0;
+let phageInventory = document.querySelector('.phageInvent');
+phageInventory.innerHTML = 0;
+let trinityInventory = document.querySelector('.trinityInvent');
+trinityInventory.innerHTML = 0;
+let bfswordInventory = document.querySelector('.bfswordInvent');
+bfswordInventory.innerHTML = 0;
+let pickaxeInventory = document.querySelector('.pickaxeInvent');
+pickaxeInventory.innerHTML = 0;
+let infinityedgeInventory = document.querySelector('.infinityInvent');
+infinityedgeInventory.innerHTML = 0;
+
 //update
 updateCounter();
 updateCounterCpm();
 
 //clicker
 counterPlusElem.addEventListener("click",()=>{
+    audioTeemo.play();
+
     if(countCpm === 1){
         count++;
     }
@@ -30,6 +47,7 @@ counterPlusElem.addEventListener("click",()=>{
         count +=  countCpm
     }
     updateCounter();
+    localStorage.setItem('score',count)
 }) ;
 
 //autoClicker
@@ -56,6 +74,7 @@ document.getElementById('toggleButton').addEventListener('click', function() {
         clearInterval(intervalId);
 
     }
+
 });
 
 
@@ -85,7 +104,6 @@ btn.addEventListener("click", (e) => {
 });
 
 
-
 //Fonctions
 
 //update du compteur global
@@ -107,6 +125,7 @@ document.getElementById('sheen').addEventListener('click',function(){
         count -= sheenCost;
         sheenCost *= 2.0;
         cpm.innerHTML=countCpm;
+        sheenInventory.innerHTML ++;
     }
 });
 
@@ -120,6 +139,7 @@ document.getElementById('phage').addEventListener('click',function(){
         count -= phageCost;
         phageCost *= 2.0;
         cpm.innerHTML=countCpm;
+        phageInventory.innerHTML ++;
     }
 });
 
@@ -133,6 +153,7 @@ document.getElementById('trinityforce').addEventListener('click',function(){
         count -= trinityCost;
         trinityCost *= 2.0;
         cpm.innerHTML=countCpm;
+        trinityInventory.innerHTML ++;
     }
 });
 
@@ -146,6 +167,7 @@ document.getElementById('bfsword').addEventListener('click',function(){
         count -= bfswordCost;
         bfswordCost *= 2.0;
         cpm.innerHTML=countCpm;
+        bfswordInventory.innerHTML ++;
     }
 });
 
@@ -158,6 +180,7 @@ document.getElementById('pickaxe').addEventListener('click',function(){
         count -= pickaxeCost;
         pickaxeCost *= 2.0;
         cpm.innerHTML=countCpm;
+        pickaxeInventory.innerHTML ++;
     }
 });
 
@@ -170,9 +193,9 @@ document.getElementById('infinityedge').addEventListener('click',function(){
         count -= infinityedgeCost;
         infinityedgeCost *= 2.0;
         cpm.innerHTML=countCpm;
+        infinityedgeInventory.innerHTML ++;
     }
 });
-
 //BUFF IGNITE
 let countcar= countCpm * countCpm;
 document.getElementById('ignite').addEventListener('click',function(){

@@ -1,8 +1,23 @@
-
 .gametitle-custom {
     --bs-navbar-color: red;
 }
+@font-face {
+    font-family: 'beaufort';
+    src: url(../font/BeaufortforLOL-Bold.otf);
+}
 
+body {
+    background-image: url(../images/backgroundteemo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    user-select: none;
+    overflow-x: hidden;
+    font-family: 'beaufort',sans-serif;
+}
+
+.container {
+    overflow-x: hidden;
+}
 .head {
     padding-top:1%;
 }
@@ -14,8 +29,7 @@
     width: 63%;
     height: auto;
     margin-left: 20%;
-    cursor:url('/images/fightingcursor.cur'), auto;
-    user-select: none;
+    cursor:url('../images/fightingcursor.cur'), auto;
 }
 
 #Teemo:active{
@@ -30,16 +44,22 @@
     margin-top: 3%;
 }
 
-.off {
+.off, .on {
     background:linear-gradient(73deg, #020022, #1f6b69);
-    border: 1px solid rgb(198, 169, 3);
+    border: 1px solid rgb(200, 155, 60);
     color: white;
+    border-radius: 7px;
 }
 
 .shop, .offcanvas-body,.offcanvas-header {
     background: linear-gradient(73deg, #020022, #1f6b69);
     border: 2px solid rgb(198, 169, 3);
-    cursor: url('/images/pointerlol.cur'), auto; 
+    border-radius: 7px;
+    cursor: url('../images/pointerlol.cur'), auto;
+}
+
+.shop {
+    border-radius: 7px;
 }
 
 .Abilities-btn{
@@ -48,11 +68,12 @@
     display: flex;
     justify-content: space-around;
     border: 1px solid rgb(198, 169, 3);
+    border-radius: 7px;
 }
 
 .Abilities-btn:hover, .dropdown-item:hover {
     border: 1px solid aquamarine;
-    cursor: url('/images/pointerlol.cur'), auto;
+    cursor: url('../images/pointerlol.cur'), auto;
 }
 
 .dropdown-item:hover {
@@ -69,6 +90,7 @@
     background: linear-gradient(to right, #020022, #3dded9);
     animation: gradientAnimation 0.1s normal;
 }
+
 @keyframes gradientAnimation {
     0% {
         background: linear-gradient(to right, #020022, #1f6b69);
@@ -86,14 +108,17 @@
         background: linear-gradient(to right, #020022, #3dded9);
     }
 }
+
 span {
     font-size: 20px
 }
+
 .click-effect {
     position: absolute;
     top: 50%;
     left: 50%;
 }
+
 .spike {
     position: absolute;
     bottom: 0;
@@ -118,12 +143,11 @@ span {
     color: #0aa27d;
     transform: rotate(var(--angle)) translateY(var(--distance));
 }
-.remover{
+
+.remover {
     display: none;
 }
-.effect .spike {
-    animation: animate 0.45s;
-}
+
 @keyframes animate {
     0% {
         width: 3px;
@@ -144,3 +168,13 @@ span {
         transform: rotate(var(--angle)) translateY(var(--distance));
     }
 }
+
+
+.effect .spike {
+    animation: animate 0.45s;
+}
+
+@media only screen and (max-width: 600px) {
+    
+}
+
