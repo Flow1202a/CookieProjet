@@ -11,6 +11,10 @@ body {
     overflow-x: hidden;
     font-family: 'beaufort',sans-serif;
 }
+
+.container {
+    overflow-x: hidden;
+}
 .head {
     padding-top:1%;
 }
